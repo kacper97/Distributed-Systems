@@ -1,0 +1,32 @@
+!SESSION 2018-10-01 18:00:38.697 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IE
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product -data C:\Users\Kacpix\Dropbox\Year 4\Semester 1\Distributed Systems -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-10-01 18:01:08.854
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Kacpix'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.core 4 0 2018-10-01 18:02:58.396
+!MESSAGE Saving Git team provider data to C:\Users\Kacpix\Dropbox\Year 4\Semester 1\Distributed Systems\.metadata\.plugins\org.eclipse.core.resources\.projects\Lab2\org.eclipse.egit.core\GitProjectData.properties failed.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Saving Git team provider data to C:\Users\Kacpix\Dropbox\Year 4\Semester 1\Distributed Systems\.metadata\.plugins\org.eclipse.core.resources\.projects\Lab2\org.eclipse.egit.core\GitProjectData.properties failed.
+	at org.eclipse.egit.core.project.GitProjectData.store(GitProjectData.java:590)
+	at org.eclipse.egit.core.project.GitProjectData.update(GitProjectData.java:359)
+	at org.eclipse.egit.core.project.GitProjectData$RCL.resourceChanged(GitProjectData.java:97)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SUBENTRY 1 org.eclipse.egit.core 4 0 2018-10-01 18:02:58.398
+!MESSAGE Saving Git team provider data to C:\Users\Kacpix\Dropbox\Year 4\Semester 1\Distributed Systems\.metadata\.plugins\org.eclipse.core.resources\.projects\Lab2\org.eclipse.egit.core\GitProjectData.properties failed.
