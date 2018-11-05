@@ -4,22 +4,26 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class Client extends JFrame {
+public class ClientExtended extends JFrame implements ActionListener {
   // Text field for receiving radius
   private JTextField jtf = new JTextField();
 
   // Text area to display contents
   private JTextArea jta = new JTextArea();
+  
+  // Buttons 
+  private JButton send = new JButton("send");
+  private JButton exit = new JButton("exit");
 
   // IO streams
   private DataOutputStream toServer;
   private DataInputStream fromServer;
 
   public static void main(String[] args) {
-    new Client();
+    new ClientExtended();
   }
 
-  public Client() {
+  public ClientExtended() {
     // Panel p to hold the label and text field
     JPanel p = new JPanel();
     p.setLayout(new BorderLayout());
@@ -30,10 +34,10 @@ public class Client extends JFrame {
     setLayout(new BorderLayout());
     add(p, BorderLayout.NORTH);
     add(new JScrollPane(jta), BorderLayout.CENTER);
+    add(send, BorderLayout.WEST);
+    add(exit, BorderLayout.EAST);
 
-    jtf.addActionListener(new Listener()); // Register listener
-
-    setTitle("Client");
+    setTitle("Client Extended");
     setSize(500, 300);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setVisible(true); // It is necessary to show the frame here!
@@ -53,10 +57,9 @@ public class Client extends JFrame {
     catch (IOException ex) {
       jta.append(ex.toString() + '\n');
     }
-  }
-
-  private class Listener implements ActionListener {
-    @Override
+  
+  
+    send.addActionListener(new ActionListener() {
     public void actionPerformed(ActionEvent e) {
       try {
         // Get the radius from the text field
@@ -78,5 +81,18 @@ public class Client extends JFrame {
         System.err.println(ex);
       }
     }
+  });
+    
+    exit.addActionListener(new ActionListener() {
+    	public void actionPerformed(ActionEvent e) {
+    		System.exit(0);
+    	}
+    });
   }
-}	
+
+@Override
+public void actionPerformed(ActionEvent e) {
+	// TODO Auto-generated method stub
+	
+}
+}
