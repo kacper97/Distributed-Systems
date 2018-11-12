@@ -6521,3 +6521,11 @@ java.net.UnknownHostException: dev.eclipse.org
 	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
 	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
 	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.core.resources 2 2 2018-11-12 11:54:11.402
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2018-11-12 11:54:11.402
+!MESSAGE The project description file (.project) for 'Assign2_Kacper' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.jdt.debug 2 0 2018-11-12 12:12:59.566
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
